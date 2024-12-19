@@ -1,0 +1,10 @@
+requests
+functools
+bs4
+colorama
+pynput
+pyfiglet
+g4f
+webbrowser
+platform
+phonenumbers
