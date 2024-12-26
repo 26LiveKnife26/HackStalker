@@ -234,13 +234,6 @@ def get_ip_by_hostname():
         print(f'💣Хост💣 {hostname}\n💣IP💣 {socket.gethostbyname(hostname)}')
     except socket.gaierror as error:
         print(f'💣Неправильная ссылка - {error}💣')
-
-
-def main():
-    print(get_ip_by_hostname())
-    
-if __name__ == '__main__':
-    main()
 def check_mail(mail=''):
     req_link = f'{API}?action=getMessages&login={mail.split("@")[0]}&domain={mail.split("@")[1]}'
     r = requests.get(req_link).json()
@@ -577,7 +570,7 @@ def hashes():
             print("💣Недопустимый номер!💣")
             return
 
-        what_hash = input("💣Введите текст💣")
+        what_hash = input("💣Введите текст💣 ")
         algorithm_name = algorithms[hashs]
 
         if algorithm_name.startswith("shake"):
@@ -618,11 +611,31 @@ def get_pc():
 💣CPU Count💣 💣{psutil.cpu_count()}💣
 💣CPU Used💣 💣{psutil.cpu_percent()}%💣
 💣Python Version💣 💣{platform.python_version()}💣
-💣Python Used💣 💣{psutil.Process().memory_info()[0] / 2.**30:.2f}💣 GB💣
+💣Python Used💣 💣{psutil.Process().memory_info()[0] / 2.**30:.2f} GB💣
 💣Display Name💣 💣{monitor.name}💣
 💣Display FullScreen💣 💣{monitor.width} x {monitor.height}💣
 💣Battery💣 💣{int(psutil.sensors_battery().percent)}%💣
 💣IP💣 💣{requests.get(url=f'http://ip-api.com/json/').json().get('query')}💣
 💣MAC💣 💣{uuid.getnode()}💣
 💣Time💣 💣{time.strftime("Время💣 %H:%M:%S💣   💣Дата💣 %Y-%m-%d💣")}"""
-        print(pc_stat)
+    print(pc_stat)
+def help():
+    print("""1. DDOS - DDOs атака на сайт.
+2. SecMail - Tempmail, временная почта.
+3. Parsing - Полный парсинг сайта.
+4. Exit (или) Quit - Выйти из программы.
+5. GPT - Задать вопрос чату GPT.
+6. Fork - Форк оперативной памяти.
+7. Click - Автокликер.
+8. Console - Команда в консоль.
+9. Clear - Очистка консоли.
+10. Phone - Узнать информацию о номере.
+11. IP - Узнать информация о IP.
+12. 999 - Вывести бесконечную последовательность чисел.
+13. Web - Открыть сайт.
+14. WiFi - Узнать информацию о вашем WiFi.
+15. Site - Узнать IP домена сайта.
+16. Reload - Перезагрузка программы.
+17. Hash - Захэшировать текст.
+18. PC - Информация о пк.
+19. Help - Вывести этот текст.""")

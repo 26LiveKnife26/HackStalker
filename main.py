@@ -56,8 +56,10 @@ while True:
         functions.hashes()
     elif "pc" in t.lower():
         functions.get_pc()
+    elif "help" in t.lower():
+        functions.help()
     else:
-        print(f"💣Not find a command - {t}💣")
+        print(f"💣Не найдена команда - {t}💣")
     with open("history.txt", "a+") as history:
         history.write(t+"""
 """)
