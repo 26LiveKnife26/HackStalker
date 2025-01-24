@@ -13,7 +13,6 @@ import requests
 import uuid
 import screeninfo
 import psutil
-import importlib
 import webbrowser
 import phonenumbers
 import g4f
@@ -129,8 +128,8 @@ def get_info(ip):
 def clicker():
     while True:
         if clicking:
-            mouse.click(Button.left, 5)
-            time.sleep(0.8)
+            mouse.click(Button.left, 2)
+            time.sleep(0.01)
 
 
 def toggle_event(key):
@@ -153,7 +152,7 @@ mouse = Controller()
 def clicker():
     while True:
         if clicking:
-            mouse.click(Button.left, 5)
+            mouse.click(Button.left, 1)
             time.sleep(0.1)
 
 
@@ -616,7 +615,11 @@ def help():
 13. Web - Открыть сайт.
 14. WiFi - Узнать информацию о вашем WiFi.
 15. Site - Узнать IP домена сайта.
-16. Reload - Перезагрузка программы.
-17. Hash - Захэшировать текст.
-18. PC - Информация о пк.
-19. Help - Вывести этот текст.""")
+16. Hash - Захэшировать текст.
+17. PC - Информация о пк.
+18. Gut - Итоги года разработчика.
+19. Author - Информация о авторе
+20. Help - Вывести этот текст.""")
+def author():
+    print("""Привет! Я Кирилл, мне 10 лет, и да... Я написал эту программу...
+""")

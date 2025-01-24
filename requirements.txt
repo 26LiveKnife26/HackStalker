@@ -3,7 +3,6 @@ requests
 uuid
 screeninfo
 psutil
-importlib
 webbrowser
 phonenumbers
 g4f
